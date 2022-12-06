@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="MusicCollectionViewCell" id="gTV-IL-0wX" customClass="MusicCollectionViewCell" customModule="MusicMVVMCollection" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="185" height="239"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="185" height="239"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="4AP-bk-yBh">
+                        <rect key="frame" x="8" y="8" width="169" height="169"/>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Artist" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Aye-s5-g5K">
+                        <rect key="frame" x="8" y="185" width="141" height="17"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hiW-9w-UDJ">
+                        <rect key="frame" x="157" y="185" width="20" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="20" id="44S-sY-ulA"/>
+                            <constraint firstAttribute="width" constant="20" id="Vdx-8D-GYS"/>
+                        </constraints>
+                        <state key="normal" title="Button"/>
+                        <buttonConfiguration key="configuration" style="tinted" title="F"/>
+                    </button>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Album" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R5M-EQ-r81">
+                        <rect key="frame" x="8" y="213" width="170" height="18"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="170" id="MlF-QL-bSn"/>
+                            <constraint firstAttribute="height" constant="18" id="oPm-KK-HgU"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstItem="R5M-EQ-r81" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="8" id="2t0-yv-7xy"/>
+                <constraint firstItem="hiW-9w-UDJ" firstAttribute="top" secondItem="4AP-bk-yBh" secondAttribute="bottom" constant="8" id="8ac-Bo-W8w"/>
+                <constraint firstItem="Aye-s5-g5K" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="8" id="CtR-WS-YJQ"/>
+                <constraint firstItem="4AP-bk-yBh" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="8" id="JPd-7D-Cm8"/>
+                <constraint firstItem="Aye-s5-g5K" firstAttribute="top" secondItem="4AP-bk-yBh" secondAttribute="bottom" constant="8" id="PbF-Hm-mcT"/>
+                <constraint firstItem="hiW-9w-UDJ" firstAttribute="leading" secondItem="Aye-s5-g5K" secondAttribute="trailing" constant="8" id="QhF-d3-aLd"/>
+                <constraint firstAttribute="trailing" secondItem="hiW-9w-UDJ" secondAttribute="trailing" constant="8" id="RBn-r4-bZr"/>
+                <constraint firstItem="R5M-EQ-r81" firstAttribute="top" secondItem="hiW-9w-UDJ" secondAttribute="bottom" constant="8" id="Sgg-I0-QfI"/>
+                <constraint firstItem="4AP-bk-yBh" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="8" id="gQ8-Pk-BSb"/>
+                <constraint firstAttribute="bottom" secondItem="R5M-EQ-r81" secondAttribute="bottom" constant="8" id="xP3-nz-cHm"/>
+                <constraint firstAttribute="trailing" secondItem="4AP-bk-yBh" secondAttribute="trailing" constant="8" id="zXu-yp-slo"/>
+            </constraints>
+            <size key="customSize" width="185" height="239"/>
+            <connections>
+                <outlet property="albumLabel" destination="R5M-EQ-r81" id="byV-Y4-5o5"/>
+                <outlet property="artistLabel" destination="Aye-s5-g5K" id="WRv-05-SAm"/>
+                <outlet property="img" destination="4AP-bk-yBh" id="Ecd-Os-e36"/>
+            </connections>
+            <point key="canvasLocation" x="54.615384615384613" y="23.104265402843602"/>
+        </collectionViewCell>
+    </objects>
+</document>
