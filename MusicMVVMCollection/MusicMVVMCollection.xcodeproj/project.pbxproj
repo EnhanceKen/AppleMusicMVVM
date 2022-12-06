@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0288C936293F88B100E51FA5 /* columFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0288C935293F88B100E51FA5 /* columFlowLayout.swift */; };
 		0298F3FC293F0E6300ED8C6C /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0298F3FB293F0E6300ED8C6C /* DetailViewController.swift */; };
 		02C6FCA92938011E00F666B9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C6FCA82938011E00F666B9 /* AppDelegate.swift */; };
 		02C6FCAB2938011E00F666B9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C6FCAA2938011E00F666B9 /* SceneDelegate.swift */; };
@@ -25,6 +26,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0288C935293F88B100E51FA5 /* columFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = columFlowLayout.swift; sourceTree = "<group>"; };
 		0298F3FB293F0E6300ED8C6C /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		02C6FCA52938011E00F666B9 /* MusicMVVMCollection.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MusicMVVMCollection.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		02C6FCA82938011E00F666B9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -109,6 +111,7 @@
 		02C6FCC1293822E500F666B9 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				0288C935293F88B100E51FA5 /* columFlowLayout.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -240,6 +243,7 @@
 				02C6FCD629383D6A00F666B9 /* NetworkParams.swift in Sources */,
 				02C6FCB32938011E00F666B9 /* MusicMVVMCollection.xcdatamodeld in Sources */,
 				02C6FCCB293823D500F666B9 /* MusicCollectionViewCell.swift in Sources */,
+				0288C936293F88B100E51FA5 /* columFlowLayout.swift in Sources */,
 				02C6FCAB2938011E00F666B9 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -12,6 +12,14 @@ class MusicViewController: UIViewController {
     let musicCell = "MusicCollectionViewCell"
     let musicAlbumViewModel = MusicAlbumViewModel()
     
+    let columnLayout = ColumnFlowLayout(
+            cellsPerRow: 2,
+            minimumInteritemSpacing: 10,
+            minimumLineSpacing: 10,
+            sectionInset: UIEdgeInsets(top: 50, left: 10, bottom: 50, right: 10)
+        )
+    
+    
     @IBOutlet weak var collectionView: UICollectionView!
 
     override func viewDidLoad() {
@@ -20,7 +28,13 @@ class MusicViewController: UIViewController {
         self.title = "Music"
         self.collectionView.dataSource = self
         self.collectionView.layer.cornerRadius = 25
-        self.collectionView.backgroundColor = .black
+        self.collectionView.backgroundColor = .systemMint
+        
+        
+        
+        collectionView?.collectionViewLayout = columnLayout
+        collectionView?.contentInsetAdjustmentBehavior = .always
+        collectionView?.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "MusicCollectionViewCell")
        
 //        self.collectionView.delegate = self
 //        self.collectionView.prefetchDataSource = self
@@ -55,11 +69,10 @@ extension MusicViewController: UICollectionViewDataSource {
             
             switch self.tabBarItem.tag {
             case 0:
-                self.view.backgroundColor = .systemMint
+                self.view.backgroundColor = .white
                 
                 cell.layer.cornerRadius = 25
-//                cell.img.layer.masksToBounds = true
-//                cell.img.layer.cornerRadius = 15
+
                 cell.albumLabel.text = self.musicAlbumViewModel.albumTitle(for: indexPath.row)
                 cell.artistLabel.text = self.musicAlbumViewModel.artist(for: indexPath.row)
                 self.musicAlbumViewModel.imageData(for: indexPath.row, completion: { data in
@@ -92,14 +105,22 @@ extension MusicViewController: UICollectionViewDelegate{
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
     
-//        let musicSelection = DetailViewController()
-//
-//          musicSelection.artist.text = self.musicAlbumViewModel.artist(for: indexPath.row)
-//          musicSelection.album.text = self.musicAlbumViewModel.albumTitle(for: indexPath.row)
-//          musicSelection.genre.text = self.musicAlbumViewModel.albumGenres(for: indexPath.row).compactMap({ elem in
-//              elem.name
-//          }).joined(separator: ", ")
-//          musicSelection.releaseDate.text = dateReadable(date: self.musicAlbumViewModel.releaseDate(for: indexPath.row) ?? "")
+        let musicSelection = DetailViewController()
+//        guard case musicSelection.album = self.musicAlbumViewModel.albumTitle(for: indexPath.row) else {return}
+
+//        musicSelection.album.text = self.musicAlbumViewModel.albumTitle(for: indexPath.row)
+//        musicSelection.artist.text = self.musicAlbumViewModel.artist(for: indexPath.row)
+//        self.musicAlbumViewModel.imageData(for: indexPath.row, completion: { data in
+//            DispatchQueue.main.async {
+//                if let data = data {
+//                    musicSelection.albumImage.image = UIImage(data: data)
+//                }
+//            }
+//        })
+
+        
+        
+        
         
         
         
