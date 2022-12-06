@@ -16,6 +16,9 @@ class MusicCollectionViewCell: UICollectionViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        
+        self.img.layer.cornerRadius = 100
     }
-
 }
+
+

@@ -4,6 +4,7 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -21,6 +22,9 @@
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Artist" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Aye-s5-g5K">
                         <rect key="frame" x="8" y="185" width="141" height="17"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="141" id="UG6-cV-yvh"/>
+                        </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
@@ -32,7 +36,7 @@
                             <constraint firstAttribute="width" constant="20" id="Vdx-8D-GYS"/>
                         </constraints>
                         <state key="normal" title="Button"/>
-                        <buttonConfiguration key="configuration" style="tinted" title="F"/>
+                        <buttonConfiguration key="configuration" style="tinted" image="heart.circle" catalog="system"/>
                     </button>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Album" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R5M-EQ-r81">
                         <rect key="frame" x="8" y="213" width="170" height="18"/>
@@ -47,6 +51,7 @@
                 </subviews>
             </view>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <color key="backgroundColor" systemColor="systemGray4Color"/>
             <constraints>
                 <constraint firstItem="R5M-EQ-r81" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="8" id="2t0-yv-7xy"/>
                 <constraint firstItem="hiW-9w-UDJ" firstAttribute="top" secondItem="4AP-bk-yBh" secondAttribute="bottom" constant="8" id="8ac-Bo-W8w"/>
@@ -69,4 +74,10 @@
             <point key="canvasLocation" x="54.615384615384613" y="23.104265402843602"/>
         </collectionViewCell>
     </objects>
+    <resources>
+        <image name="heart.circle" catalog="system" width="128" height="123"/>
+        <systemColor name="systemGray4Color">
+            <color red="0.81960784313725488" green="0.81960784313725488" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
 </document>
